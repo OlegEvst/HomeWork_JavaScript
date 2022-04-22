@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Homework</title>
+</head>
+<body>
+<!--
+Обязательное задание.
+
+Необходимо реализовать четыре функции, каждая функция должна принимать по два
+числа и выполнять одну из операций (каждая функция выполняет одну из них):
+1. Сложение
+2. Разность
+3. Умножение
+4. Деление
+
+Необходимо сделать так, чтобы функция вернула число, например выражение
+`console.log(sum(2, 6));` должно вывести число 8 в консоль (sum - функция
+сложения в данном примере, ваши названия функций могут отличаться).
+
+Округлять значения, которые возвращают функции не нужно, однако, обратите
+внимание на разность, функция должна вычесть из большего числа меньшее, либо
+вернуть 0, если числа равны.
+
+Функциям всегда передаются корректные числа, проверки на NaN, Infinity делать
+не нужно.
+
+Необходимо для всех функций прописать комментарии jsdoc https://jsdoc.app/.
+--->
+<script>
+  "use strict";
+  
+/**
+ * Просим ввести у пользователя 2 числа.
+ * {number} oneNumber - Первое число.
+ * {number} twoNumber - Второе число.
+ */
+const oneNumber = +prompt('Введите первое число');
+const twoNumber = +prompt('Введите второе число');
+    
+/**
+ * Функция складывает 2 числа и возвращает результат.
+ * @param {number} oneNumber - Первое число.
+ * @param {number} twoNumber - Второе число.
+ * @returns {number} sumNumber - Возвращает сумму первого и второго числа. 
+ */       
+function sumNumber(oneNumber,twoNumber) {
+return oneNumber + twoNumber ;
+} 
+/**
+ * Функция возвращает результат разности 2 чисел.
+ * @param {number} oneNumber - Первое число.
+ * @param {number} twoNumber - Второе число. 
+ * @returns {number} 
+ */     
+function difNumber(oneNumber,twoNumber) {
+  if (oneNumber > twoNumber) {
+      return oneNumber - twoNumber; 
+} if (oneNumber === twoNumber) {
+      return 0;
+}     return twoNumber - oneNumber; 
+    }  
+/**
+ * Функция возвращает результат произведения 2 чисел.
+ * @param {number} oneNumber - Первое число. 
+ * @param {number} twoNumber - Второе число.
+ * @returns {number} 
+ */
+function multNumber(oneNumber,twoNumber) {
+      return oneNumber * twoNumber;
+    } 
+/**
+ * Функция возвращает результат частное 2 чисел.
+ * @param {number} oneNumber - Первое число. 
+ * @param {number} twoNumber - Второе число.
+ * @returns {number}  
+ */
+function divNumber(oneNumber,twoNumber) {
+      return oneNumber / twoNumber;
+    } 
+      console.log("Ваше число : " + sumNumber(oneNumber,twoNumber));
+      console.log("Ваше число : " + difNumber(oneNumber,twoNumber));
+      console.log("Ваше число : " + multNumber(oneNumber,twoNumber));
+      console.log("Ваше число : " + divNumber(oneNumber,twoNumber));
+         
+</script>
+</body>
+</html>
