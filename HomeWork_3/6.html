@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Homework</title>
+</head>
+<body>
+<!--
+Необязательное задание.
+
+Необходимо вывести горку в консоль (используя цикл for), как показано на
+рисунке, только у вашей горки должно быть 20 рядов, а не 5:
+
+```
+x
+xx
+xxx
+xxxx
+xxxxx
+```
+
+Примечание: в трех косых кавычках ``` показан пример кода для вывода, вам эти
+кавычки выводить не нужно.
+-->
+<script>
+  "use strict";
+
+/**
+ * Счётчик внутри счётчика.
+ *  - в строку xSymbol запишем пустую строку.
+ *  - внешний счётчик extCounter возвращает значения пока не станет 20.
+ *  - внутренний счётчик intСounter возвращает значения
+ *  пока внешний не даст "false".
+ */
+let xSymbol = '';
+  for(let extCounter = 0; extCounter <= 20; extCounter ++) {
+  for(let intСounter = 0; intСounter <= extCounter; intСounter++) {
+    xSymbol += 'x';
+}
+/**
+ * Полученное из циклов строка 'х' переноситься на новую строку 
+ * с помощью newline символа '\n'.
+ */
+    xSymbol += ('\n');
+}
+console.log(xSymbol);
+
+</script>
+</body>
+</html>
