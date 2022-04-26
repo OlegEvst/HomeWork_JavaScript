@@ -13,12 +13,10 @@
 2. Необходимо отсортировать массив products используя метод sort по цене,
 начиная с самой маленькой, заканчивая самой большой ценой, после чего вывести
 отсортированный массив в консоль.
--->
+--->
 <script>
 "use strict";
-/**
- * 
- */
+
 const products = [
   {
     id: 3,
@@ -47,28 +45,22 @@ const products = [
 ];
 /**
  * В массиве с помощью метода filter найдем элементы, только гда есть фото.
- * @returns {string} - возврат элементов только гда есть фото.
+ * @returns {string} - возврат элементов только где есть фото.
 */
-let photos = products.filter(function(truePhoto) {
-return truePhoto.photos && truePhoto.photos !=0;
-});
-/**
- * В массиве с помощью метода sort найдем элементы price,
- * отсортируем по возрастанию.
- * @returns {number} - условие сортировки price -1,1,0.
-*/
-let salePrice = products.sort(function(onePrice,twoPrice) {
-if (onePrice.price < twoPrice.price) {
-return -1;
-}
-if (onePrice.price > twoPrice.price) {
-return 1;
-}
-return 0;
+const photos = products.filter(function(productPhoto) {
+return productPhoto.photos && productPhoto.photos.length != 0;
 });
 
+/**
+ * В массиве с помощью метода sort + в тело добавим вычитание двух прайсов,
+ *  будет возвращаться либо отриц. число, либо положительное, либо 0,
+ *  если два элемента равны по цене.
+ */
+
+products.sort((a, b) => a.price - b.price);
+
 console.log(photos);
-console.log(salePrice);
+console.log(products);
 
 </script>
 </body>
