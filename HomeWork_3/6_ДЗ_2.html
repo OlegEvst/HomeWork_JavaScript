@@ -21,21 +21,23 @@ console.log(declinationOfNumber(5, "стул", "стула", "стульев"));
 
 Функция должна работать с любым словом и любым целым положительным числом.
 Все аргументы, которые будут передаваться функции будут верны.
--->
+--->
 <script>
   "use strict";
 
 /**
  * Функция возвращает одно из трех переданных слов подходящих под число.
- * @param {Number} count - первый числовой аргумент функции. 
+ * @param {number} count - первый числовой аргумент функции. 
  * @param {string} one - Первое слово. 
  * @param {string} two - Второе слово. 
  * @param {string} five  - Третье слово. 
  * @returns {string} - Возврат просклоняемого слова. 
  */
+
  function declinationOfNumber(count, one, two, five) {
-  const largeRange = parseInt(count % 100);
-  const SmallRange = parseInt(largeRange % 10);
+  const largeRange = Number.parseInt(count % 100);
+  const SmallRange = Number.parseInt(largeRange % 10);
+
 /**
  * Вернётся третье слово, если числовой аргумент после деления 
  * на 100 с остатком будет в диапазоне от 5 до 20.
@@ -46,11 +48,12 @@ console.log(declinationOfNumber(5, "стул", "стула", "стульев"));
  * деления на 100 с остатком и деления на 10 с остатком, будет равен 1.
  * В остальных случаях возвращается третье слово.
  */
+
     if (largeRange >= 5 && largeRange <= 20) return five;
     if (SmallRange >= 2 && SmallRange < 5) return two;
     if (SmallRange === 1)  return one;
-    return five;
-  }
+       return five;
+}
 const requestNumber = +prompt("Введите число");
 const word = declinationOfNumber(requestNumber, "месяц", "масяца", "месяцев");
   
