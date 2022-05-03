@@ -19,48 +19,47 @@
 -->
 <script>
   "use strict";
-/**
- * Функция-конструктор в es5 стиле.
- * Создадим объект для продукта с именем и ценой.
- * В объект запишем свойства.
- * В прототип article запишем функцию с выводом названия товара и ценой.
- * В прототип make25Discount запишем функцию, которая
- * уменьшает стоимость продукта на 25% и выводит значение в консоль.
- */
-function ProductES5(name, price) {
+  /**
+   * Функция-конструктор в es5 стиле.
+  * Создадим объект для продукта с именем и ценой.
+  * В объект запишем свойства.
+  * В прототип article запишем функцию с выводом названия товара и ценой.
+  * В прототип make25Discount запишем функцию, которая
+  * уменьшает стоимость продукта на 25% и выводит значение в консоль.
+  */
+  function ProductES5(name, price) {
        this.name = name;
        this.price = price;
-}
+  }
 
-ProductES5.prototype.article = function() {
-  console.log(`Название товара ${this.name}: цена ${this.price}$`);
-};
+  ProductES5.prototype.article = function() {
+       console.log(`Название товара ${this.name}: цена ${this.price}$`);
+  };
 
-ProductES5.prototype.make25Discount = function() {
-  this.price *= 0.85;
-  console.log(`Название товара ${this.name}: цена со скидкой ${this.price}$`);
-};
-/**
- * В тело записываем данные товара.
- */
-const telephoneES5 = new ProductES5 ('Iphone 13 pro', 900);
-const $_telephoneES5 = new ProductES5 ('Iphone X', 500);
-/**
- * Вызов прототипа.
- */
-telephoneES5.article();
-telephoneES5.make25Discount();
-$_telephoneES5.article();
-$_telephoneES5.make25Discount();
-/**
- * --------------------------------------------------------------------------
- * Функция-конструктор в es6 стиле.
- * Создадим класс для продукта с именем и ценой.
- * Метод article просто выводит название товара и его цену.
- * Метод make25Discount уменьшает стоимость продукта на 25%.
- */
-class ProductES6 {
-  constructor (name, price) {
+  ProductES5.prototype.make25Discount = function() {
+       this.price *= 0.85;
+  };
+  /**
+  * В тело записываем данные товара.
+  */
+  const telephoneES5 = new ProductES5('Iphone 13 pro', 900);
+  const $_telephoneES5 = new ProductES5('Iphone X', 500);
+  /**
+  * Вызов прототипа.
+  */
+  telephoneES5.article();
+  telephoneES5.make25Discount();
+  $_telephoneES5.article();
+  $_telephoneES5.make25Discount();
+  /**
+  * --------------------------------------------------------------------------
+  * Функция-конструктор в es6 стиле.
+  * Создадим класс для продукта с именем и ценой.
+  * Метод article просто выводит название товара и его цену.
+  * Метод make25Discount уменьшает стоимость продукта на 25%.
+  */
+  class ProductES6 {
+    constructor (name, price) {
     this.name = name;
     this.price = price;
   } 
@@ -71,21 +70,20 @@ class ProductES6 {
 
   make25Discount() {
     this.price *= 0.85;
-    console.log(`Название товара ${this.name}: цена со скидкой ${this.price}$`);
+    }
   }
-}
-/**
- * В тело записываем данные товара.
- */
-const telephoneES6 = new ProductES6 ('Iphone 13 pro', 900);
-const $_telephoneES6 = new ProductES6 ('Iphone X', 500);
-/**
- * Вызов метода.
- */
-telephoneES6.article();
-telephoneES6.make25Discount();
-$_telephoneES6.article();
-$_telephoneES6.make25Discount();
+  /**
+  * В тело записываем данные товара.
+  */
+  const telephoneES6 = new ProductES6('Iphone 13 pro', 900);
+  const $_telephoneES6 = new ProductES6('Iphone X', 500);
+  /**
+  * Вызов метода.
+  */
+  telephoneES6.article();
+  telephoneES6.make25Discount();
+  $_telephoneES6.article();
+  $_telephoneES6.make25Discount();
 
 </script>
 </body>
