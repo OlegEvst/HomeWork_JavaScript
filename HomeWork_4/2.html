@@ -59,6 +59,7 @@
     this.userName = userName;
     this.textPost = textPost;
     this.datePost = new Date();
+    }
   }
   /**
   * Прототип для создания нового поста.
@@ -97,7 +98,6 @@
     this.updatedAt = new Date();
     this.highlighted = true;
   };
-
   const userPost_ES5 = new PostES5('Олег','Пост пользователя');
   console.log(userPost_ES5);
 
@@ -111,7 +111,6 @@
   fixedPostES5.edit('Новый закреплённый пост пользователя');
   
   console.log(fixedPostES5);
-
   /**
   * --------------------------------------------------------------------------
   * Функция-конструктор в es6 стиле.
@@ -157,7 +156,7 @@
 
   const fixedPostES6 = new AttachedPostES6('Олег','Закреплённый пост пользователя');
   console.log(fixedPostES6);
-
+  
   fixedPostES6.makeTextHighlighted();
   fixedPostES6.edit('Новый закреплённый пост пользователя');
 
