@@ -47,10 +47,10 @@
       console.error(`Ошибка вводных данных, это не число!`);
       return undefined;
     }
-      return {
+    return {
       units: getNumber % 10,
-      dozens: parseInt(getNumber / 10) % 10,
-      hundreds: parseInt(getNumber / 100),
+      dozens: Math.trunc(getNumber / 10) % 10,
+      hundreds: Math.trunc(getNumber / 100),
     };
   }
 

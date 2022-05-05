@@ -60,11 +60,12 @@
     this.textPost = textPost;
     this.datePost = new Date();
     }
+  }
   /**
   * Прототип для создания нового поста.
   * new Date() - заносит в переменную текущую дату;
   */
-    PostES5.prototype.edit = function(textPost) {
+  PostES5.prototype.edit = function(textPost) {
     this.textPost = textPost;
     this.datePost = new Date(); 
   };
@@ -97,21 +98,19 @@
     this.updatedAt = new Date();
     this.highlighted = true;
   };
+  const userPost_ES5 = new PostES5('Олег','Пост пользователя');
+  console.log(userPost_ES5);
 
-  const $userPost = new PostES5('Олег','Пост пользователя');
-    console.log($userPost);
+  userPost_ES5.edit('Новый пост пользователя');
+  console.log(userPost_ES5);
 
-  $userPost.edit('Новый пост пользователя');
-    console.log($userPost);
+  const fixedPostES5 = new AttachedPostES5('Олег','Закреплённый пост пользователя');
+  console.log(fixedPostES5);
 
-  const $fixedPostES5 = new AttachedPostES5('Олег','Закреплённый пост пользователя');
-    console.log($fixedPostES5);
-
-  $fixedPostES5.makeTextHighlighted();
-  $fixedPostES5.edit('Новый закреплённый пост пользователя');
+  fixedPostES5.makeTextHighlighted();
+  fixedPostES5.edit('Новый закреплённый пост пользователя');
   
-    console.log($fixedPostES5);
-
+  console.log(fixedPostES5);
   /**
   * --------------------------------------------------------------------------
   * Функция-конструктор в es6 стиле.
@@ -136,12 +135,9 @@
   class AttachedPostES6 extends PostES6 {
   /**
   * Новый класс принемает значения по умолчанию из верхнего класса.
-  * super -отвечает за наследуемые значения из верхнего класса.
   * highlighted - по умолчанию закреплённый пост не подсвечивается, 
   * только после написания нового поста.
   */
-    super(userName,textPost) { 
-    }
     highlighted = false;
   /**
   * Метод меняет значение по умолчанию и ставит true(новый текст подсвечивается).
@@ -152,19 +148,19 @@
       this.datePost = new Date();
     }
   }
-  const userPost = new PostES6('Олег','Пост пользователя');
-    console.log(userPost);
+  const userPost_ES6 = new PostES6('Олег','Пост пользователя');
+  console.log(userPost_ES6);
 
-  userPost.edit('Новый пост пользователя');
-    console.log(userPost);
+  userPost_ES6.edit('Новый пост пользователя');
+  console.log(userPost_ES6);
 
   const fixedPostES6 = new AttachedPostES6('Олег','Закреплённый пост пользователя');
-    console.log(fixedPostES6);
-
+  console.log(fixedPostES6);
+  
   fixedPostES6.makeTextHighlighted();
   fixedPostES6.edit('Новый закреплённый пост пользователя');
 
-    console.log(fixedPostES6);
+  console.log(fixedPostES6);
 
   </script>
 </body>
