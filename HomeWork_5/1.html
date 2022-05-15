@@ -46,8 +46,8 @@
   3. Найти все элементы на странице с классом "card-link", которые лежат в
   элементе с классом "card-body" и вывести полученную коллекцию в консоль.
   */
-  const cardLink = document.querySelector(".card-body:last-child");
-  console.log(cardLink.querySelectorAll(".card-link"));
+  const cardLink = document.querySelectorAll(".card-body .card-link");
+  console.log(cardLink);
   /*
   4. Найти первый попавшийся элемент на странице у которого есть атрибут
   data-number со значением 50 и вывести его в консоль.
@@ -73,7 +73,7 @@
   const newEl = document.querySelector(".card");
   const pEl = document.createElement('p');
   pEl.textContent = 'Привет'; 
-  newEl.insertAdjacentElement('beforebegin',pEl);
+  newEl.insertAdjacentElement('afterbegin',pEl);
 
   const newElem = document.querySelector(".card");
   newElem.prepend('Привет 2');
