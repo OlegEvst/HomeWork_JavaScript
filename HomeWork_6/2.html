@@ -95,20 +95,19 @@
   const formOne = document.querySelectorAll('.form-control');
 
   formAll.addEventListener('submit', event => {
-   formOne.forEach(formOne => {
-    if (formOne.value === "") {
-    formOne.classList.add('error');
-    event.preventDefault();
-    }
-   });
+    formOne.forEach(formOne => {
+      if (formOne.value === "") {
+        formOne.classList.add('error');
+        event.preventDefault();
+      }
+    });
   });
   formAll.addEventListener('input', event => {
-   if (event.target.value === '') {
-    event.target.classList.add('error');
-   } 
-   else { 
-    event.target.classList.remove('error');
-   }
+    if (event.target.value === '') {
+      event.target.classList.add('error');
+    } else { 
+      event.target.classList.remove('error');
+    } 
   });
 
 </script>

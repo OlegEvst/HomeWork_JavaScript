@@ -43,27 +43,27 @@
   golden, также такой класс должен ставиться всем звездам до нее слева.
   */
   const starAction = document.querySelectorAll('.stars_container .fas');
-   starAction.forEach(el => el.addEventListener('mouseover', event => {
-     for (const oneStars of starAction) {
-      oneStars.classList.add('golden');
-     if (oneStars === event.target) {
-      break;
-     }
-     }   
-   }));
+    starAction.forEach(el => el.addEventListener('mouseover', event => {
+      for (const oneStars of starAction) {
+        oneStars.classList.add('golden');
+      if (oneStars === event.target) {
+        break;
+      } 
+    }   
+  }));
   /*
   2. Когда мы уводим курсор мыши от звезды, все поставленные классы из первого
   задания должны быть удалены.
   */
   const starOut = document.querySelectorAll('.stars_container .fas');
-   starOut.forEach(el => el.addEventListener('mouseout', event => {
-     for (const star of starOut) {
-      star.classList.remove('golden');
-     if (star === event.target) {
-      break;
-     }
-     }   
-   }));
+    starOut.forEach(el => el.addEventListener('mouseout', event => {
+      for (const star of starOut) {
+        star.classList.remove('golden');
+      if (star === event.target) {
+        break;
+      }
+    }   
+  }));
   /*
   3. Когда мы переводим мышь от одной звезды к другой, у нас могут мигать
   звезды (временно могут становиться черными). Почему так? Напишите словами.
