@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Homework</title>
+</head>
+<body>
+  <canvas id="canvas"></canvas>
+<!--
+Необязательное задание.
+
+Необходимо реализовать функцию-конструктор Rectangle.
+-->
+<script>
+  "use strict";
+
+  /**
+   * Returns the rectangle object with width and height parameters and
+   * getArea() method.
+   *
+   * @param {number} width - Rectangle width
+   * @param {number} height - Rectangle height
+   * @return {Rectangle}
+   */
+function Rectangle(w, h) {
+	this.width = w;
+	this.height = h;
+	this.getArea = function () {
+		return this.width * this.height;
+	}
+}
+  const r = new Rectangle(10, 20);
+  console.log(r.width); // 10
+  console.log(r.height); // 20
+  console.log(r.getArea()); // 200
+
+/* Просто нашёл метод CanvasRenderingContext2D.fillRect(), решил отрисовать c
+рандомным цветом*/
+
+function getRandomColor() {
+  let letters = '0123456789ABCDEF';
+  let color = '#';
+  for (let i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
+const myRectangle = document.querySelector("#canvas").getContext("2d");
+myRectangle.fillStyle = getRandomColor();
+myRectangle.fillRect(10, 10, r.height*100, r.height*100);
+
+</script>
+</body>
+</html>
