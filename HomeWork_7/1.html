@@ -62,17 +62,18 @@
   };
 
   let addActiv = document.querySelector('.active');
-  let changeText = document.querySelector('div.text');
+  const changeText = document.querySelector('div.text');
+  changeText.value = +parseInt(getComputedStyle(addActiv).fontSize);
 
   document.querySelector('.nav').addEventListener('click', ({target}) => {
     if (target.className !== 'nav-link') {
       return;
     } 
-      addActiv.classList.remove('active');
-      target.classList.add('active');
-      addActiv = target;
-      changeText.textContent = panelText[
-        target.parentElement.dataset.text];
+  
+    addActiv.classList.remove('active');
+    target.classList.add('active');
+    addActiv = target;
+    changeText.textContent = panelText[target.parentElement.dataset.text];
   });
   /*
   2. Необходимо сделать так, чтобы при изменении input'а менялся и размер шрифта

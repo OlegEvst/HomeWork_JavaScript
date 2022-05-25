@@ -25,10 +25,9 @@
    * параметр "n"
    */
   function descendingOrder(n) {
-    n = String(n);
-    const strEL = Array.from(n).map(i=>Number(i)).sort().reverse().join('');
-    n = Number(strEL);
-    return n;
+    return Number(Array.from(String(n), i => Number(i))
+    .sort((a, b) => b - a)
+    .join(''));
   }
 
   console.log(descendingOrder(42145)); // 54421
