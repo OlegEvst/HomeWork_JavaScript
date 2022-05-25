@@ -77,10 +77,17 @@
   */
   document.addEventListener('click', event => {
     let elemsFilter = event.target.classList.contains('super_element');
+<<<<<<< HEAD
+      if (elemsFilter == true) {
+    elemsFilter = "присутствует";
+    } 
+      else { 
+=======
     if (elemsFilter) {
     elemsFilter = "присутствует";
     } 
     else { 
+>>>>>>> 428380e74c67d4d4c6f8de1115a8c667b3f19908
     elemsFilter = "отсутствует";
     } 
     console.log(`Класс "super_element" ${elemsFilter} в элементе "${event.target.tagName.toLowerCase()}".`); 
@@ -117,7 +124,11 @@
   /*
   7. С помощью JS необходимо изменить цвет заднего фона каждого второго тега li.
   */
+<<<<<<< HEAD
+  const backgroundLI = document.querySelectorAll('li:nth-child(2n)')
+=======
   const backgroundLI = document.querySelectorAll('li:nth-child(2n)');
+>>>>>>> 428380e74c67d4d4c6f8de1115a8c667b3f19908
   backgroundLI.forEach(el => el.style.backgroundColor = '#FF0000');
 
   </script>

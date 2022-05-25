@@ -95,6 +95,22 @@
   const formOne = document.querySelectorAll('.form-control');
 
   formAll.addEventListener('submit', event => {
+<<<<<<< HEAD
+   formOne.forEach(formOne => {
+    if (formOne.value === "") {
+    formOne.classList.add('error');
+    event.preventDefault();
+    }
+   });
+  });
+  formAll.addEventListener('input', event => {
+   if (event.target.value === '') {
+    event.target.classList.add('error');
+   } 
+   else { 
+    event.target.classList.remove('error');
+   }
+=======
     formOne.forEach(formOne => {
       if (formOne.value === "") {
         formOne.classList.add('error');
@@ -108,6 +124,7 @@
     } else { 
       event.target.classList.remove('error');
     } 
+>>>>>>> 428380e74c67d4d4c6f8de1115a8c667b3f19908
   });
 
 </script>
