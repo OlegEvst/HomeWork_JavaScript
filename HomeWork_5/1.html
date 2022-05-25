@@ -46,8 +46,13 @@
   3. Найти все элементы на странице с классом "card-link", которые лежат в
   элементе с классом "card-body" и вывести полученную коллекцию в консоль.
   */
+<<<<<<< HEAD
   const cardLink = document.querySelector(".card-body:last-child");
   console.log(cardLink.querySelectorAll(".card-link"));
+=======
+  const cardLink = document.querySelectorAll(".card-body .card-link");
+  console.log(cardLink);
+>>>>>>> 428380e74c67d4d4c6f8de1115a8c667b3f19908
   /*
   4. Найти первый попавшийся элемент на странице у которого есть атрибут
   data-number со значением 50 и вывести его в консоль.
@@ -57,9 +62,15 @@
   5. Выведите содержимое тега title в консоль.
   * {2 рабочих варианта}.
   */
+<<<<<<< HEAD
    console.log(document.querySelector('title').innerText);
 
    console.log(document.title);
+=======
+  console.log(document.querySelector('title').innerText);
+
+  console.log(document.title);
+>>>>>>> 428380e74c67d4d4c6f8de1115a8c667b3f19908
   /*
   6. Получите элемент с классом "card-title" и выведите его родительский узел
   в консоль.
@@ -73,7 +84,11 @@
   const newEl = document.querySelector(".card");
   const pEl = document.createElement('p');
   pEl.textContent = 'Привет'; 
+<<<<<<< HEAD
   newEl.insertAdjacentElement('beforebegin',pEl);
+=======
+  newEl.insertAdjacentElement('afterbegin',pEl);
+>>>>>>> 428380e74c67d4d4c6f8de1115a8c667b3f19908
 
   const newElem = document.querySelector(".card");
   newElem.prepend('Привет 2');
