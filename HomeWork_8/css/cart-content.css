@@ -1,0 +1,117 @@
+
+.cart-content {
+    cursor: default;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    width: 490px;
+    background-color: #222222;
+    border-radius: 0 0 0 5px;
+    margin-top: 16px;
+    z-index: 100;
+    opacity: 1;
+}
+
+.content {
+    padding-top: 90px;
+}
+
+.cart-content_list {
+    max-width: 400px;
+    list-style-type: none;
+    border-radius: 5px;
+    overflow-y:scroll;
+    max-height: 250px;
+}
+
+.cart-product {
+  display: flex; 
+  align-items: center; 
+  padding: 12px 20px;
+  background-color:  #e8e8e8;
+}
+
+.cart-product img {
+    max-width: 75px;
+    max-height: 80px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.cart-product_title {
+    margin-bottom: 15px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color:#222222;
+}
+
+.cart-product_price {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    color:#222222;
+}
+
+.cart-product_delete {
+    cursor: pointer;
+    margin-left: 90px;
+    width: 20px;
+    height: 20px;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    background-image: url(images/trash.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.cart-content_bottom {
+    padding: 24px 20px;
+    align-items: center;
+    justify-content: space-between;
+    display: inline-block;
+}
+
+.cart-content_fullprice {
+    flex-direction: column;
+    color:cornsilk;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    float: right;
+}
+
+.cart-content_total {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 21px;
+    color:cornsilk;   
+}
+
+.fullprice {
+   font-weight: 700;
+   font-size: 20px;
+   line-height: 21px;
+   color:cornsilk;
+   float: right;
+   position: absolute;
+   margin-left: 80px;
+   
+}
+
+.cart-content_btn {
+    width: 150px;
+    border: none;
+    cursor: pointer;
+    background-color: #33CC66;
+    color:(--color-dark);
+    font-size: 14px;
+    border-radius: 4px;
+    padding: 10px 0;
+    margin-left: 220px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+}
+
+   
